@@ -28,3 +28,25 @@ def checkWin(xState, zState):
             print("O Won the match")                                      //when O wins
             return 0
     return -1
+
+ if name == "__main__":
+    xState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    zState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    turn = 1 # 1 for X and 0 for O
+    print("Welcome to Tic Tac Toe")
+    while(True):
+        printBoard(xState, zState)
+        if(turn == 1):
+            print("X's Chance")
+            value = int(input("Please enter a value: "))
+            xState[value] = 1
+           else:
+            print("O's Chance")
+            value = int(input("Please enter a value: "))
+            zState[value] = 1
+        cwin = checkWin(xState, zState)
+        if(cwin != -1):
+            print("Match over")
+            break
+        
+        turn = 1 - turn
