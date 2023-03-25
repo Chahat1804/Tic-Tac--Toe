@@ -40,3 +40,13 @@ if __name__ == "__main__":
             print("X's Chance")
             value = int(input("Please enter a value: "))
             xState[value] = 1
+        else:
+            print("O's Chance")
+            value = int(input("Please enter a value: "))
+            zState[value] = 1
+        cwin = checkWin(xState, zState)
+        if(cwin != -1):
+            print("Match over")
+            break
+        
+        turn = 1 - turn
