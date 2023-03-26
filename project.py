@@ -1,5 +1,5 @@
-def sum(a, b, c ):
-    return a + b + c
+def sum(a, b, d ):
+    return a + b + d
 
 def printGrid(xState, zState):
     zero = 'X' if xState[0] else ('O' if zState[0] else 0)
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     xState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     zState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     turn = 1 
-    print("Welcome to Tic - Tac - Toe")
+    print("Welcome to Tic Tac Toe Game")
     while(True):
         printGrid(xState, zState)
         if(turn == 1):
@@ -50,3 +50,4 @@ if __name__ == "__main__":
             print(" Match over ")
             break
         turn = 1 - turn 
+        
