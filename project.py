@@ -1,7 +1,7 @@
 def sum(a, b, c ):
     return a + b + c
 
-def printBoard(xState, zState):
+def printGrid(xState, zState):
     zero = 'X' if xState[0] else ('O' if zState[0] else 0)
     one = 'X' if xState[1] else ('O' if zState[1] else 1)
     two = 'X' if xState[2] else ('O' if zState[2] else 2)
@@ -25,17 +25,17 @@ def checkWin(xState, zState):
             print("X Won the match")                                     #when X wins
             return 1
         if(sum(zState[win[0]], zState[win[1]], zState[win[2]]) == 3):
-            print("O Won the match")                                      #when O wins
+            print("O Won the match")                                     #when O wins 
             return 0
     return -1
 
 if __name__ == "__main__":
     xState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     zState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-    turn = 1 # 1 for X and 0 for O
+    turn = 1 
     print("Welcome to Tic Tac Toe")
     while(True):
-        printBoard(xState, zState)
+        printGrid(xState, zState)
         if(turn == 1):
             print("X's Chance")
             value = int(input("Please enter a value: "))
