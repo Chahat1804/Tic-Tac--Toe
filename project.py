@@ -25,14 +25,14 @@ def checkWin(xState, zState):
             print("X Won the match")                                     #when X wins
             return 1
         if(sum(zState[win[0]], zState[win[1]], zState[win[2]]) == 3):
-            print("O Won the match")                                      #when O wins
+            print("O Won the match")                                     #when O wins 
             return 0
     return -1
 
 if __name__ == "__main__":
     xState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     zState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-    turn = 1 # 1 for X and 0 for O
+    turn = 1 
     print("Welcome to Tic Tac Toe")
     while(True):
         printBoard(xState, zState)
