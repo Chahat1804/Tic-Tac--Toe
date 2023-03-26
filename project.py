@@ -33,7 +33,7 @@ if __name__ == "__main__":
     xState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     zState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     turn = 1 
-    print("Welcome to Tic Tac Toe")
+    print("Welcome to Tic - Tac - Toe")
     while(True):
         printGrid(xState, zState)
         if(turn == 1):
@@ -47,6 +47,6 @@ if __name__ == "__main__":
             zState[value] = 1
         cwin = checkWin(xState, zState)
         if(cwin != -1):
-            print("Match over")
+            print(" Match over ")
             break
         turn = 1 - turn 
