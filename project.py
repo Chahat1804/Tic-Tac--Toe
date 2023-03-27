@@ -1,5 +1,5 @@
-def sum(a, b, d ):
-    return a + b + d
+def sum(a, b, c ):
+    return a + b + c
 
 def printGrid(xState, zState):
     zero = 'X' if xState[0] else ('O' if zState[0] else 0)
